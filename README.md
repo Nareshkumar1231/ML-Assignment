@@ -1,4 +1,4 @@
-# Assignment 2 — Comparative Classification and Streamlit Evaluation
+# Assignment 2 ï¿½ Comparative Classification and Streamlit Evaluation
 
 ## a. Problem statement
 Build and compare five supervised classification algorithms for the Wisconsin Diagnostic Breast Cancer (WDBC) task. The target is to classify a record as **malignant** or **benign**. All models use the same stratified 80:20 train/test split. The saved estimators are loaded by the Streamlit app to evaluate a user-uploaded labelled test CSV without retraining.
@@ -14,7 +14,7 @@ Build and compare five supervised classification algorithms for the Wisconsin Di
 - **Preprocessing:** StandardScaler is included in pipelines for Logistic Regression, KNN, Gaussian Naive Bayes and SVM. Decision Tree uses raw numeric features.
 
 ## c. GitHub Repository Link
-**Add your repository URL after creating and pushing this project:** `https://github.com/<your-username>/<your-repository>`
+https://github.com/Nareshkumar1231/ML-Assignment/
 
 ## d. Models used and evaluation
 
@@ -65,7 +65,7 @@ aiml_assignment2/
 +-- test_data.csv
 +-- model_metrics.csv
 +-- data/
-¦   +-- wdbc.csv
+ï¿½   +-- wdbc.csv
 +-- model/
     +-- logistic_regression.joblib
     +-- decision_tree.joblib
@@ -74,7 +74,7 @@ aiml_assignment2/
     +-- svm.joblib
 ```
 
-## Final submission links and evidence — complete these yourself
+## Final submission links and evidence ï¿½ complete these yourself
 - GitHub repository: **[PASTE YOUR REPOSITORY URL]**
 - Live Streamlit app: **[PASTE YOUR DEPLOYED APP URL]**
 - BITS Virtual Lab screenshot: **[INSERT YOUR OWN SCREENSHOT]**
