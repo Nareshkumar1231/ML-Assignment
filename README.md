@@ -1,4 +1,4 @@
-# Assignment 2 � Comparative Classification and Streamlit Evaluation
+# Assignment 2 — Comparative Classification and Streamlit Evaluation
 
 ## a. Problem statement
 Build and compare five supervised classification algorithms for the Wisconsin Diagnostic Breast Cancer (WDBC) task. The target is to classify a record as **malignant** or **benign**. All models use the same stratified 80:20 train/test split. The saved estimators are loaded by the Streamlit app to evaluate a user-uploaded labelled test CSV without retraining.
@@ -10,7 +10,7 @@ Build and compare five supervised classification algorithms for the Wisconsin Di
 - **Input features:** 30 numeric measurements computed from digitized images of fine needle aspirates.
 - **Target:** `target` with values `malignant` and `benign`.
 - **Split:** 80% training / 20% test; `random_state=42`; stratified by target.
-- **Files:** `data/wdbc.csv` is the complete dataset; `test_data.csv` is the held-out test partition uploaded to the app.
+- **Files:** `data/wdbc.csv` is the complete dataset; `test_data.csv` is the default dataset used by the app, and `custom_test_data.csv` is an additional sample file for manual upload testing.
 - **Preprocessing:** StandardScaler is included in pipelines for Logistic Regression, KNN, Gaussian Naive Bayes and SVM. Decision Tree uses raw numeric features.
 
 ## c. GitHub Repository Link
@@ -38,7 +38,7 @@ Positive class for Precision, Recall and F1 is **malignant**. AUC uses the predi
 **Overall winner on this split (by F1): Support Vector Machine.** This selection is metric-dependent; review AUC, MCC and the confusion matrix before making a final judgement.
 
 ## Streamlit application
-The application accepts a labelled CSV, provides a model-selection dropdown, displays all six evaluation metrics, a confusion matrix and a classification report, and offers downloadable predictions. It loads the pre-trained `.joblib` estimators and does not retrain on uploaded data.
+The application accepts a labelled CSV, provides a model-selection dropdown, displays all six evaluation metrics, a confusion matrix and a classification report, and offers downloadable predictions. It loads the pre-trained `.joblib` estimators and does not retrain on uploaded data. When no file is uploaded, it automatically loads `test_data.csv` from the repository as the default dataset.
 
 ## Run on BITS Virtual Lab
 1. Upload/extract this repository in your BITS Virtual Lab workspace.
@@ -46,11 +46,11 @@ The application accepts a labelled CSV, provides a model-selection dropdown, dis
 3. Install dependencies: `python -m pip install -r requirements.txt`
 4. Run training: `python train_models.py` (creates/refreshes the five model files and metrics).
 5. Launch the app: `streamlit run app.py`
-6. Upload `test_data.csv` and test each classifier from the dropdown.
+6. The app automatically loads `test_data.csv`; optionally upload `custom_test_data.csv` or another CSV for comparison.
 7. Capture your own screenshot of the app execution inside BITS Virtual Lab for the submission.
 
 ## Deploy on Streamlit Community Cloud
-1. Push the complete project to your own GitHub repository, including `app.py`, `requirements.txt`, `README.md`, `data/wdbc.csv`, `test_data.csv`, `model/` and `train_models.py`.
+1. Push the complete project to your own GitHub repository, including `app.py`, `requirements.txt`, `README.md`, `data/wdbc.csv`, `test_data.csv`, `custom_test_data.csv`, `model/` and `train_models.py`.
 2. Open https://streamlit.io/cloud, sign in with GitHub and create a new app.
 3. Select your repository, branch and `app.py`, then deploy.
 4. Copy the live app URL into your final submission PDF.
@@ -58,29 +58,26 @@ The application accepts a labelled CSV, provides a model-selection dropdown, dis
 ## Repository structure
 ```
 aiml_assignment2/
-+-- app.py
-+-- train_models.py
-+-- requirements.txt
-+-- README.md
-+-- test_data.csv
-+-- model_metrics.csv
-+-- data/
-�   +-- wdbc.csv
-+-- model/
-    +-- logistic_regression.joblib
-    +-- decision_tree.joblib
-    +-- knn.joblib
-    +-- gaussian_nb.joblib
-    +-- svm.joblib
+├── app.py
+├── train_models.py
+├── requirements.txt
+├── README.md
+├── test_data.csv
+├── custom_test_data.csv
+├── model_metrics.csv
+├── data/
+│   └── wdbc.csv
+└── model/
+    ├── logistic_regression.joblib
+    ├── decision_tree.joblib
+    ├── knn.joblib
+    ├── gaussian_nb.joblib
+    └── svm.joblib
 ```
-
-## Final submission links and evidence � complete these yourself
-- GitHub repository: **[PASTE YOUR REPOSITORY URL]**
-- Live Streamlit app: **[PASTE YOUR DEPLOYED APP URL]**
-- BITS Virtual Lab screenshot: **[INSERT YOUR OWN SCREENSHOT]**
 
 ## Final submission links and evidence
 - GitHub repository: [https://github.com/Nareshkumar1231/ML-Assignment/](https://github.com/Nareshkumar1231/ML-Assignment/)
 - Live Streamlit app: [https://nareshkumar1231-ml-assignment-app-e8bjgq.streamlit.app/](https://nareshkumar1231-ml-assignment-app-e8bjgq.streamlit.app/)
+- BITS Virtual Lab screenshot: **[INSERT YOUR OWN SCREENSHOT]**
 
 Do not submit until you have personally run the code in BITS Virtual Lab, checked the deployed app, and inserted the required screenshot.
