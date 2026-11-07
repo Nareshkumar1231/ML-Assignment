@@ -78,6 +78,4 @@ aiml_assignment2/
 ## Final submission links and evidence
 - GitHub repository: [https://github.com/Nareshkumar1231/ML-Assignment/](https://github.com/Nareshkumar1231/ML-Assignment/)
 - Live Streamlit app: [https://nareshkumar1231-ml-assignment-app-e8bjgq.streamlit.app/](https://nareshkumar1231-ml-assignment-app-e8bjgq.streamlit.app/)
-- BITS Virtual Lab screenshot: **[INSERT YOUR OWN SCREENSHOT]**
-
-Do not submit until you have personally run the code in BITS Virtual Lab, checked the deployed app, and inserted the required screenshot.
+Do not submit until you have personally run the code in BITS Virtual Lab and checked the deployed app.
